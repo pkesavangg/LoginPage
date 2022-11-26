@@ -12,29 +12,7 @@ struct form_2: View {
     var body: some View {
         NavigationView {
             
-            VStack{
-                GeometryReader { geometry in
-                    HStack(spacing: 0) {
-                        Text("Left")
-                            .font(.largeTitle)
-                            .foregroundColor(.black)
-                            .frame(width: geometry.size.width * 0.33)
-                            .background(.yellow)
-                        Text("Right")
-                            .font(.largeTitle)
-                            .foregroundColor(.black)
-                            .frame(width: geometry.size.width * 0.67)
-                            .background(.orange)
-                    }
-                
-                    Button("Testing") {
-                        print("h")
-                    }
-                }.frame(height: 50)
-                
-            }
-            
-          Text("HII")
+           Text("Nothing")
         }
         .gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
     }
